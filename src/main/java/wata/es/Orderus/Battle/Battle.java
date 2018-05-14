@@ -63,18 +63,17 @@ public class Battle {
 	}
 
 	private int printTheWinner() {
-		int winner = 0;
 		System.out.println("------------------------------------------------------");
-		if (character1.getHealth() > 0 && character2.getHealth() > 0) {
+		if (character1.getHealth() > 0 && character2.getHealth() > 0) {// 0 -> Empate
 			System.out.println("	Draw between " + character1.getName() + " and " + character2.getName());
-		} else if (character1.getHealth() == 0) {
-			System.out.println("	" + character2.getName().toUpperCase() + " is the Winner");
-			winner = 2;
-		} else {
+			return 0;
+		} else if (character2.getHealth() == 0) { //1 ->gana el character1
 			System.out.println("	" + character1.getName().toUpperCase() + " is the Winner");
-			winner = 1;
+			return 1;
+		} else { //2 -_> Gana el Character 2
+			System.out.println("	" + character2.getName().toUpperCase() + " is the Winner");
+			return 2;
 		}
-		return winner;
 	}
 
 	private FantasyCharacter whoAttackFirst() {

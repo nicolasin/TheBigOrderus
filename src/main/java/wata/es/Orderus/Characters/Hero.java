@@ -49,7 +49,7 @@ public abstract class Hero extends FantasyCharacter {
 		}
 		int strengthToTesting = this.strength;
 		this.strength = previousStrength;
-		return strengthToTesting;
+		return strengthToTesting*numAttacks;
 	}
 
 	@Override

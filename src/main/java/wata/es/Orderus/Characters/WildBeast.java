@@ -3,16 +3,17 @@ package wata.es.Orderus.Characters;
 public final class WildBeast extends Monster{
 	public WildBeast(String name) {
 		super(name);
+		generateStates();
 	}
 	public WildBeast() {
-		super("");
-		this.name = this.getClass().getSimpleName();
+		super("WildBeast");
+		generateStates();
 	}
 	public void generateStates() {
-		super.health = getRandomAtributeBetween(60,90);
-		super.strength = getRandomAtributeBetween(60, 90);
-		super.defense = getRandomAtributeBetween(40, 60);
-		super.speed = getRandomAtributeBetween(40, 60);
-		super.luck = getRandomAtributeBetween(25, 40);
+		this.health = getRandomAtributeBetween(60,90);
+		this.strength = getRandomAtributeBetween(60, 90);
+		this.defense = getRandomAtributeBetween(40, 60);
+		this.speed = getRandomAtributeBetween(40, 60);
+		this.luck = getRandomAtributeBetween(25, 40);
 	}
 }

@@ -84,9 +84,9 @@ class OrderusTest {
 		FantasyCharacter monster = new WildBeast();
 		int numIteration = 1000;
 		boolean OrderusIsUsedAttackSkill = false;
-		for (int i = 0; i < numIteration; i++) {
-			
-			if (Orderus1.attack(monster) >= 140 && Orderus1.attack(monster) <= 160) {
+		for (int i = 0; i < numIteration; i++) {	
+			int attack = Orderus1.attack(monster);
+			if ( attack>= 140 && attack <= 160) {
 				OrderusIsUsedAttackSkill = true;
 			}
 		}
